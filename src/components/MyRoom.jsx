@@ -3,26 +3,29 @@ import { useGLTF, useTexture } from '@react-three/drei';
 
 const MyRoom = (props) => {
 
-        const { nodes, materials } = useGLTF('/models/Room.glb')
-    const monitortxt = useTexture('textures/desk/monitor.png');
-    const screenTxt = useTexture('textures/desk/screen.png');
+        const { nodes, materials } = useGLTF('/models/Room.glb');
+  // const monitorTexture = useTexture('/textures/desk/monitor.png');
+   // const screenTexture = useTexture('/textures/desk/screen.png');
      return (
+
             <group {...props} dispose={null}>
                 <mesh
                     castShadow
                     receiveShadow
                     geometry={nodes.screen_screens_0.geometry}
                     material={materials.screens}
-                />
-                <meshMatcapMaterial map={screenTxt} />
+
+                    >
+
+                </mesh>
                 <mesh
                     castShadow
                     receiveShadow
                     geometry={nodes.screen_glass_glass_0.geometry}
                     material={materials['Material.002']}
-                />
-                <meshMatcapMaterial map={monitortxt} />
+                >
 
+                </mesh>
                 <group
                     position={[-38.371, 73.542, -27.937]}
                     rotation={[-1.603, -0.008, -1.488]}
@@ -182,7 +185,8 @@ const MyRoom = (props) => {
                     receiveShadow
                     geometry={nodes.table_table_mat_0_2.geometry}
                     material={materials.computer_mat}
-                />
+                >
+                </mesh>
                 <mesh
                     castShadow
                     receiveShadow
