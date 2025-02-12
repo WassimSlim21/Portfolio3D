@@ -9,14 +9,14 @@ const PythonLogo = (props) =>
     const { nodes, materials } = useGLTF('/models/python_programming_language.glb')
 
     useGSAP(() => {
-        gsap.to(pythonRef.current.position, {
+       /* gsap.to(pythonRef.current.position, {
             y: pythonRef.current.position.y + 0.5,
             duration: 1.5,
             repeat: -1,
             yoyo: true,
             ease: "sine.inOut"
         });
-
+*/
         gsap.to(pythonRef.current.rotation, {
             x: Math.PI * 2, // Full rotation on X-axis
             duration: 3,

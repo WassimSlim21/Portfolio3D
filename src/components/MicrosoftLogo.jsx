@@ -1,12 +1,24 @@
 import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import {Float, useGLTF} from '@react-three/drei'
+import {useMediaQuery} from "react-responsive";
+import {calculateSizes} from "../constants/index.js";
 const MicrosoftLogo = (props) => {
+    const isSmall = useMediaQuery({ maxWidth: 440 });
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+    const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
+    const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
-
-        const { nodes, materials } = useGLTF('/models/microsoft.glb')
+        const { nodes, materials } = useGLTF('/models/microsoftLogo.glb')
         return (
+            <Float floatIntensity={1}>
+                {/* Ambient Light for Soft Illumination */}
+
+                {/* Point Light for a Focused Glow on the Logo */}
+                <pointLight position={sizes.microsoftLogoPosition} intensity={20} color={"#FFFFFF"} />
+
+
             <group {...props} dispose={null}>
-                <group position={[-0.059, 0.26, -0.188]} rotation={[-Math.PI / 2, 0, 0]} scale={3.144}>
+                <group position={[-0.059, 0.26, -0.188]} rotation={[-Math.PI / 2, 0, 0]} scale={12}>
                     <group rotation={[Math.PI / 2, 0, 0]}>
                         <group position={[0.02, -0.023, 0.058]} scale={0.001}>
                             <group
@@ -18,8 +30,8 @@ const MicrosoftLogo = (props) => {
                                     receiveShadow
                                     geometry={nodes.Object_6.geometry}
                                     material={materials.material}
-                                    position={[108.87, 568.345, 1059.232]}
-                                    scale={2.072}
+                                    position={[65.634, 443.086, 850.925]}
+                                    scale={0.635}
                                 />
                             </group>
                             <group
@@ -31,8 +43,8 @@ const MicrosoftLogo = (props) => {
                                     receiveShadow
                                     geometry={nodes.Object_8.geometry}
                                     material={materials.material_1}
-                                    position={[-49.818, 568.292, 1059.232]}
-                                    scale={2.072}
+                                    position={[119.721, 443.105, 850.925]}
+                                    scale={0.635}
                                 />
                             </group>
                             <group
@@ -44,8 +56,8 @@ const MicrosoftLogo = (props) => {
                                     receiveShadow
                                     geometry={nodes.Object_10.geometry}
                                     material={materials.material_2}
-                                    position={[-49.822, 406.69, 1059.232]}
-                                    scale={2.072}
+                                    position={[119.722, 498.185, 850.925]}
+                                    scale={0.635}
                                 />
                             </group>
                             <group
@@ -57,29 +69,31 @@ const MicrosoftLogo = (props) => {
                                     receiveShadow
                                     geometry={nodes.Object_12.geometry}
                                     material={materials.material_3}
-                                    position={[108.721, 406.743, 1059.232]}
-                                    scale={2.072}
+                                    position={[65.685, 498.167, 850.925]}
+                                    scale={0.635}
                                 />
                             </group>
                         </group>
                         <group position={[0.074, 0.003, 0.242]} scale={0.002}>
-                            <group position={[-62.378, -10.815, 7.5]}>
+                            <group position={[-70, 10, 2.5]}>
                                 <mesh
                                     castShadow
                                     receiveShadow
                                     geometry={nodes.Object_15.geometry}
-                                    material={materials.material_4}
-                                    position={[28.761, 72.943, -17.548]}
-                                    scale={2.072}
-                                />
+                                    position={[-10, 75.996, -15]}
+                                    scale={0.504}
+                                >
+                                    <meshStandardMaterial color={"#FFFFFF"} />
+                                </mesh>
                             </group>
                         </group>
                     </group>
                 </group>
             </group>
+            </Float>
         )
     }
 
-    useGLTF.preload('/models/microsoft.glb')
+    useGLTF.preload('/models/microsoftLogo.glb')
 
 export default MicrosoftLogo

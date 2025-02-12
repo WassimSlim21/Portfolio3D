@@ -35,7 +35,7 @@ const AzureLogo = (props)=> {
                 receiveShadow
                 geometry={nodes.Azure_Feet_for_Azure_Percept.geometry}
                 material={materials['Material.004']}
-                position={[-0.119, 1.004, -0.5]}
+                position={[-0.119, 1.004, -0.249]}
                 scale={0.03}
             />
             <mesh
@@ -44,8 +44,8 @@ const AzureLogo = (props)=> {
                 geometry={nodes.Text.geometry}
                 material={nodes.Text.material}
                 position={[-2.045, 0.108, -0.622]}
-                rotation={[1.569, 0.008, -0.5]}
-                scale={1.2}
+                rotation={[1.569, 0.008, 0.2]}
+                scale={1.123}
             />
         </group>
     )

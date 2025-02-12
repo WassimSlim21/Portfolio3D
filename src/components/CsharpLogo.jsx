@@ -17,9 +17,9 @@ const CsharpLogo = (props) => {
         });
 
         gsap.to(csharpRef.current.rotation, {
-            x: -Math.PI * 4, // Full rotation on X-axis
-            duration: 2,
-            repeat: -1,
+            y: -Math.PI * 10, // Full rotation on Y-axis
+            duration: 4,
+            repeat: -0.5,
             ease: "power1.inOut"
         });
     });

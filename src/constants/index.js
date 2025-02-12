@@ -48,22 +48,29 @@ export const socialLinks = [
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
-        deskScale: isSmall ? 0.05 : isMobile ? 0.07 : 0.12,
-        deskPosition: isSmall ? [-0.5, 2, 0] : isMobile ? [-0.5, -1, 0] : [-0.5, -8.5, 0],
+        deskScale: isSmall ? 0.07 : isMobile ? 0.09 : 0.1,
+        deskPosition: isSmall ? [-0.5, 2, 0] : isMobile ? [-0.5, -3, 0] : [0.5, -5, 0],
+
+        robotScale: isSmall ? 0.2 : isMobile ? 0.25 : 0.3,
+        robotPosition: isSmall ? [3, 2.2, 6.1]: isMobile ? [-1, 6.9, 4] : [0, 6.1, 4],
+
         powerBIScale: isSmall ? 0.2 : isMobile ? 0.4 : 0.5,
-        powerBIPosition: isSmall ? [4, 4, 0] : isMobile ? [6, 4, 0] : isTablet ? [10, 4, 0] : [12, 3, 2],
-        pythonScale: isSmall ? 0.2 : isMobile ? 0.4 : 0.5,
-        pythonPosition: isSmall ? [-5, 7, 0] : isMobile ? [-8, 10, 0] : isTablet ? [-14, 10, 0] : [-16, 3, 0],
-        azureSynapseScale: isSmall ? 0.5 : isMobile ? 0.8 : 1,
-        azureSynapsePosition: isSmall ? [-5, 7, 0] : isMobile ? [-8, 10, 0] : isTablet ? [-14, 10, 0] : [-16, 3, 0],
-        reactLogoPosition: isSmall ? [10, -4, 0] : isMobile ? [10, -4, 0] : isTablet ? [10, -4, 0] : [10, -5, 0],
-        reactLogoScale: isSmall ? 0.3 : isMobile ? 0.3 : 0.5,
-        robotScale: isSmall ? 0.04 : isMobile ? 0.05 : 0.7,
-        robotPosition: isSmall ? [-0.5, 2, 0] : isMobile ? [-0.5, -1, 0] : [-6, -2.5, 7],
+        powerBIPosition: isSmall ? [6, 0, 0] : isMobile ? [8, 0, 0] : isTablet ? [12, 0, 0] : [16, 0, 0],
+
         azureLogoScale: isSmall ? 0.2 : isMobile ? 0.3 : 0.5,
-        azureLogoPosition: isSmall ? [-5, 7, 0] : isMobile ? [-8, 10, 0] : isTablet ? [-14, 10, 0] : [-16, 8, 0],
+        azureLogoPosition: isSmall ? [4, 0, 0] : isMobile ? [6, 0, 0] : isTablet ? [10, 0, 0] : [12, 0, 0],
+
         csharpLogoScale: isSmall ? 0.02 : isMobile ? 0.03 : 0.05,
-        csharpLogoPosition: isSmall ? [-5, 7, 0] : isMobile ? [-8, 10, 0] : isTablet ? [-14, 10, 0] : [-16, -5, 0]
+        csharpLogoPosition: isSmall ? [4, 6, 0] : isMobile ? [6, 6, 0] : isTablet ? [10, 6, 0] : [14, 6, 0],
+
+        microsoftLogoScale: isSmall ? 0.02 : isMobile ? 0.03 : 1.7,
+        microsoftLogoPosition: isSmall ? [4, 6, 0] : isMobile ? [6, 6, 0] : isTablet ? [10, 6, 0] : [14, -6, 0],
+
+        pythonScale: isSmall ? 0.2 : isMobile ? 0.4 : 0.5,
+        pythonPosition: isSmall ? [-6, 0, 0] : isMobile ? [-10, 0, 0] : isTablet ? [-14, 0, 0] : [-16, 0, 0],
+
+        reactLogoScale: isSmall ? 0.3 : isMobile ? 0.3 : 0.5,
+        reactLogoPosition: isSmall ? [-4, 6, 0] : isMobile ? [-8, 6, 0] : isTablet ? [-10, 6, 0] : [-12, 6, 0]
 
         /* cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
          reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],

@@ -12,7 +12,7 @@ const HeroCamera = ({ isMobile, children }) => {
     };
 
     useFrame((state, delta) => {
-        const targetPosition = zoomedIn ? [0, -2, 30] : [0, 0, 30]; // Zoom-in and Zoom-out positions
+        const targetPosition = zoomedIn ? [0, -2, 35] : [0, 0, 30]; // Zoom-in and Zoom-out positions
         easing.damp3(camera.position, targetPosition, 0.25, delta);
 
        // if (!isMobile) {

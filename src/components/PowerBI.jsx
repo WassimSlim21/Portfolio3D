@@ -10,13 +10,13 @@ const PowerBi = (props) => {
     nodes.Text.material.color.setHex(0xffffff); // Set text color to white
     nodes.Text.material.emissive.setHex(0xaaaaaa); // Add slight glow
     useGSAP(() => {
-        gsap.to(powerBIRef.current.position, {
+        /*gsap.to(powerBIRef.current.position, {
             y: powerBIRef.current.position.y + 0.5,
             duration: 1.5,
             repeat: -1,
             yoyo: true,
             ease: "sine.inOut"
-        });
+        });*/
 
         gsap.to(powerBIRef.current.rotation, {
             y: Math.PI * 2, // Full rotation on X-axis
