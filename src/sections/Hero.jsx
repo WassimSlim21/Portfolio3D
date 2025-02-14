@@ -15,6 +15,7 @@ import AzureLogo from "../components/AzureLogo.jsx";
 import CsharpLogo from "../components/CsharpLogo.jsx";
 import Button from "../components/Button.jsx";
 import MicrosoftLogo from "../components/MicrosoftLogo.jsx";
+import About from "./About.jsx";
 
 const Hero = () => {
     const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -81,23 +82,27 @@ const Hero = () => {
                                 rotation={[-5.8, -Math.PI, 0]}
                                 scale={sizes.deskScale}
                             />
+
+{/*
                             <Robot position={robotPosition} scale={sizes.robotScale} />
-                            <group>
-                                <PowerBI position={sizes.powerBIPosition} scale={sizes.powerBIScale} />
-                                <PythonLogo position={sizes.pythonPosition} scale={sizes.pythonScale} />
-                                <ReactLogo position={sizes.reactLogoPosition} scale={sizes.reactLogoScale} />
-                                <AzureLogo position={sizes.azureLogoPosition} scale={sizes.azureLogoScale} />
-                                <CsharpLogo position={sizes.csharpLogoPosition} scale={sizes.csharpLogoScale} />
-                                <MicrosoftLogo position={sizes.microsoftLogoPosition} scale={sizes.microsoftLogoScale} />
-                            </group>
+*/}
 
                         </HeroCamera>
-
+                        <group visible={!isSmall && !isMobile && !isTablet}>
+                            <PowerBI position={sizes.powerBIPosition} scale={sizes.powerBIScale} />
+                            <PythonLogo position={sizes.pythonPosition} scale={sizes.pythonScale} />
+                            <ReactLogo position={sizes.reactLogoPosition} scale={sizes.reactLogoScale} />
+                            <AzureLogo position={sizes.azureLogoPosition} scale={sizes.azureLogoScale} />
+                            <CsharpLogo position={sizes.csharpLogoPosition} scale={sizes.csharpLogoScale} />
+                            <MicrosoftLogo position={sizes.microsoftLogoPosition} scale={sizes.microsoftLogoScale} />
+                        </group>
                         {/* Ambient Light for general scene illumination */}
+{/*
                         <ambientLight intensity={0.2} />
+*/}
 
                         {/* Directional Light for strong shadows */}
-                        <directionalLight
+                       {/* <directionalLight
                             position={[-5, 8, -4]}
                             intensity={1}
                             color={"#FFAC61"}
@@ -105,8 +110,9 @@ const Hero = () => {
                             shadow-mapSize-width={4096}  // High-res shadows
                             shadow-mapSize-height={4096}
                             shadow-bias={-0.002}
-                        />
-
+                        />*/}
+                        <ambientLight intensity={1.5} />
+                        <directionalLight position={[10, 10, 10]} intensity={0.5} />
                         {/* Point Light for reflections */}
                         <pointLight position={[5, -6, 5]} intensity={2} color={"#FFAC61"} />
 
@@ -121,6 +127,7 @@ const Hero = () => {
 
                     </Suspense>
                 </Canvas>
+                <About/>
             </div>
             <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
                 <a href="#contact" className="w-fit">

@@ -48,29 +48,31 @@ export const socialLinks = [
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
-        deskScale: isSmall ? 0.07 : isMobile ? 0.09 : 0.1,
-        deskPosition: isSmall ? [-0.5, 2, 0] : isMobile ? [-0.5, -3, 0] : [0.5, -5, 0],
+        deskScale: isSmall ? 0.05 : isMobile ? 0.09 : 0.1,
+        deskPosition: isSmall ? [1, -2, 0] : isMobile ? [-0.5, -3, 0] : [0.5, -6, 0],
 
-        robotScale: isSmall ? 0.2 : isMobile ? 0.25 : 0.3,
-        robotPosition: isSmall ? [3, 2.2, 6.1]: isMobile ? [-1, 6.9, 4] : [0, 6.1, 4],
-
-        powerBIScale: isSmall ? 0.2 : isMobile ? 0.4 : 0.5,
+        robotScale: isSmall ? 3 : isMobile ? 3 : 4,
+        robotPosition: isSmall ? [-1,-4, 6.1]: isMobile ? [-1, -10, 4]  : [0, -10, 4],
+        powerBIScale: isSmall ? 0.2 : isMobile ? 0.2 : 0.3,
         powerBIPosition: isSmall ? [6, 0, 0] : isMobile ? [8, 0, 0] : isTablet ? [12, 0, 0] : [16, 0, 0],
 
-        azureLogoScale: isSmall ? 0.2 : isMobile ? 0.3 : 0.5,
+        azureLogoScale: isSmall ? 0.2 : isMobile ? 0.2 : 0.3,
         azureLogoPosition: isSmall ? [4, 0, 0] : isMobile ? [6, 0, 0] : isTablet ? [10, 0, 0] : [12, 0, 0],
 
-        csharpLogoScale: isSmall ? 0.02 : isMobile ? 0.03 : 0.05,
+        csharpLogoScale: isSmall ? 0.02 : isMobile ? 0.02 : 0.03,
         csharpLogoPosition: isSmall ? [4, 6, 0] : isMobile ? [6, 6, 0] : isTablet ? [10, 6, 0] : [14, 6, 0],
 
-        microsoftLogoScale: isSmall ? 0.02 : isMobile ? 0.03 : 1.7,
+        microsoftLogoScale: isSmall ? 1.2 : isMobile ? 1.2 : 1.5,
         microsoftLogoPosition: isSmall ? [4, 6, 0] : isMobile ? [6, 6, 0] : isTablet ? [10, 6, 0] : [14, -6, 0],
 
-        pythonScale: isSmall ? 0.2 : isMobile ? 0.4 : 0.5,
-        pythonPosition: isSmall ? [-6, 0, 0] : isMobile ? [-10, 0, 0] : isTablet ? [-14, 0, 0] : [-16, 0, 0],
+        pythonScale: isSmall ? 0.3 : isMobile ? 0.3 : 0.4,
+        pythonPosition: isSmall ? [-6, 3, 0] : isMobile ? [-10,4, 0] : isTablet ? [-14, 2, 0] : [-16, 3, 0],
 
         reactLogoScale: isSmall ? 0.3 : isMobile ? 0.3 : 0.5,
-        reactLogoPosition: isSmall ? [-4, 6, 0] : isMobile ? [-8, 6, 0] : isTablet ? [-10, 6, 0] : [-12, 6, 0]
+        reactLogoPosition: isSmall ? [-4, 6, 0] : isMobile ? [-8, 6, 0] : isTablet ? [-10, 6, 0] : [-12, 6, 0],
+
+        globeLogoScale: isSmall ? 0.3 : isMobile ? 0.3 : 0.5,
+        globeposition: isSmall ? [-4, 6, 0] : isMobile ? [-8, 6, 0] : isTablet ? [-10, 6, 0] : [-12, 6, 0]
 
         /* cubePosition: isSmall ? [4, -5, 0] : isMobile ? [5, -5, 0] : isTablet ? [5, -5, 0] : [9, -5.5, 0],
          reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [5, 4, 0] : [12, 3, 0],

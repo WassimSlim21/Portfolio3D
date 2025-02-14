@@ -452,17 +452,16 @@ const MyRoom = (props) => {
                  geometry={nodes.table_table_mat_0_12.geometry}
                  material={materials.key_mat}
              />
-             <ambientLight intensity={1.5} />
+             <ambientLight intensity={0.1} />
              <directionalLight
                  position={[2, 8, -4]} // Slightly adjust for a softer angle
-                 intensity={2.8}
+                 intensity={2}
                  color={"#FFAC61"}
                  castShadow
-                 shadow-mapSize-width={2048}
-                 shadow-mapSize-height={2048}
+
                  shadow-bias={-0.002} // Reduces sharp edges on shadows
              />
-             <pointLight position={[5, -6, 5]} intensity={2} color={"#FFAC61"} />
+
          </group>
 
         )
